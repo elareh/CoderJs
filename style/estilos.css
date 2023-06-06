@@ -1,0 +1,29 @@
+
+
+.headerIndex {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: #1F1F1F;
+    height: 70vh;
+}
+
+.headerIndex h1, p{
+    color: white;
+}
+
+
+.seccionCalculadora {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-top: 5rem;
+    width: 50%;
+}
+
+.seccionCalculadora input {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
