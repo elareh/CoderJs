@@ -1,16 +1,9 @@
-function calculadoraSteam(nombreJuego, precio) {
-    while (isNaN(precio)) {
-        console.log("El precio ingresado no es un número válido");
-        precio = prompt("Ingrese el precio del juego como se muestra en Steam");
-    }
+function sumaNumeros() { let numeros = []; let sum = 0;
 
-    let precioFinal = precio * 1.75;
-    console.log("El precio final para " + nombreJuego + " es de " + precioFinal);
-}
-
-debugger
-let nombreJuego = prompt("Ingrese el nombre del juego: ");
-let precio = prompt("Ingrese el precio del juego como se muestra en Steam");
-
-calculadoraSteam(nombreJuego, precio);
-
+    for (let i = 1; i <= 10; i++) { let numero = parseInt(prompt("Ingrese el número " + i)); numeros.push(numeros); }
+    
+    for (let j = 0; j < numeros.length; j++) { sum += numeros[j]; }
+    
+    alert("La suma de los 10 números es: " + sum); }
+    
+    sumaNumeros();
