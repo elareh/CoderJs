@@ -1,9 +1,22 @@
-function sumaNumeros() { let numeros = []; let sum = 0;
+let numeros = [1, 2, 3, 4, 5];
 
-    for (let i = 1; i <= 10; i++) { let numero = parseInt(prompt("Ingrese el número " + i)); numeros.push(numeros); }
-    
-    for (let j = 0; j < numeros.length; j++) { sum += numeros[j]; }
-    
-    alert("La suma de los 10 números es: " + sum); }
-    
-    sumaNumeros();
+let persona = {
+  nombre: "Juan",
+  edad: 25,
+  ciudad: "Buenos Aires"
+};
+
+persona.saludar = function() {
+  console.log(`Hola, mi nombre es ${this.nombre}`);
+};
+
+let nuevoNumero = prompt("Ingresa un número");
+numeros.push(parseInt(nuevoNumero));
+
+let nuevoNombre = prompt("Ingresa un nombre");
+persona.nombre = nuevoNombre;
+
+console.log("Array actualizado:", numeros);
+console.log("Objeto actualizado:", persona);
+
+persona.saludar();
