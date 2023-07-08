@@ -1,22 +1,16 @@
-let numeros = [1, 2, 3, 4, 5];
+const empleados = [
+  {nombre: "Juan", edad: "30", sueldo: "5000"},
+  {nombre: "Roberto", edad: "40", sueldo: "1000"},
+  {nombre: "Martin", edad: "19", sueldo: "3000"},
+  {nombre: "Jorge", edad: "25", sueldo: "10000"},
+];
 
-let persona = {
-  nombre: "Juan",
-  edad: 25,
-  ciudad: "Buenos Aires"
-};
+let nombreEmpleado = prompt("Ingrese nombre de empleado");
+let edadEmpleado = prompt ("Indique a partir de que edad quisiera listar a los empleados");
 
-persona.saludar = function() {
-  console.log(`Hola, mi nombre es ${this.nombre}`);
-};
+const resultado1 = empleados.find((el) => el.nombre === nombreEmpleado);
+const resultado2 = empleados.filter((el) => el.edad > edadEmpleado);
 
-let nuevoNumero = prompt("Ingresa un número");
-numeros.push(parseInt(nuevoNumero));
 
-let nuevoNombre = prompt("Ingresa un nombre");
-persona.nombre = nuevoNombre;
-
-console.log("Array actualizado:", numeros);
-console.log("Objeto actualizado:", persona);
-
-persona.saludar();
+console.log(resultado1);
+console.log(resultado2);
