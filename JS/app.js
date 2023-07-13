@@ -1,22 +1,23 @@
-let numeros = [1, 2, 3, 4, 5];
+document.getElementById('formContacto').addEventListener('submit', function(event) {
+  event.preventDefault();
 
-let persona = {
-  nombre: "Juan",
-  edad: 25,
-  ciudad: "Buenos Aires"
-};
+  let nombre = document.getElementById('nombre').value;
+  let apellido = document.getElementById('apellido').value;
+  let email = document.getElementById('email').value;
 
-persona.saludar = function() {
-  console.log(`Hola, mi nombre es ${this.nombre}`);
-};
+  // Creo el json
+  let formData = {
+    nombre: nombre,
+    apellido: apellido,
+    email: email
+  };
 
-let nuevoNumero = prompt("Ingresa un número");
-numeros.push(parseInt(nuevoNumero));
+  // Convierto en string
+  let formDataString = JSON.stringify(formData);
 
-let nuevoNombre = prompt("Ingresa un nombre");
-persona.nombre = nuevoNombre;
+  // Guardo la info
+  localStorage.setItem('formData', formDataString);
 
-console.log("Array actualizado:", numeros);
-console.log("Objeto actualizado:", persona);
 
-persona.saludar();
+alert('Formulario enviado. Los datos han sido guardados en el almacenamiento local.');
+});
